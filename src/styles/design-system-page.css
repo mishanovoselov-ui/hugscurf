@@ -1,0 +1,86 @@
+@import "./design-system.css";
+
+.ds-page {
+  padding: 2rem 0 3rem;
+}
+
+.ds-header {
+  margin-bottom: 1rem;
+}
+
+.ds-kicker {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--type-label-medium-size);
+  line-height: var(--type-label-medium-line);
+  letter-spacing: var(--type-label-medium-track);
+  text-transform: uppercase;
+}
+
+.ds-section {
+  padding: 1.2rem;
+  margin-top: 1rem;
+}
+
+.ds-section h2 {
+  margin: 0 0 0.75rem;
+}
+
+.ds-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.swatch {
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-strong);
+  border: 1px solid var(--border-default);
+}
+
+.swatch span {
+  display: block;
+  height: 72px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.swatch p {
+  margin: 0.55rem 0 0;
+  color: var(--text-secondary);
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line);
+}
+
+.ds-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ds-input {
+  width: min(340px, 100%);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-pill);
+  background: var(--color-paper-100);
+  color: var(--text-primary);
+  padding: 0.8rem 1rem;
+  font-size: var(--type-body-large-size);
+  line-height: var(--type-body-large-line);
+  letter-spacing: var(--type-body-large-track);
+}
+
+.ds-input:focus {
+  outline: none;
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-secondary) 26%, transparent);
+}
+
+@media (max-width: 760px) {
+  .ds-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

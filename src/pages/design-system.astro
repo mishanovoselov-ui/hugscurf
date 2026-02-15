@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/design-system-page.css';
+---
+
+<BaseLayout
+  title="Hugscarf Design System"
+  description="Live design system reference for Hugscarf tokens, typography, and components."
+>
+  <main class="ds-page container">
+    <header class="ds-header">
+      <p class="ds-kicker">Hugscarf</p>
+      <h1 class="type-display-medium">Design System</h1>
+      <p class="type-body-large">Live reference for Figma Make and code sync.</p>
+    </header>
+
+    <section class="surface-card ds-section">
+      <h2 class="type-headline-small">Color Tokens</h2>
+      <div class="ds-grid">
+        <article class="swatch"><span style="background: var(--color-coral-500)"></span><p>Coral 500<br />#DA6D63</p></article>
+        <article class="swatch"><span style="background: var(--color-sun-500)"></span><p>Sun 500<br />#F2B73F</p></article>
+        <article class="swatch"><span style="background: var(--color-sky-500)"></span><p>Sky 500<br />#5CC6D5</p></article>
+        <article class="swatch"><span style="background: var(--color-plum-500)"></span><p>Plum 500<br />#9F6AC5</p></article>
+        <article class="swatch"><span style="background: var(--text-primary)"></span><p>Text Primary<br />#222222</p></article>
+        <article class="swatch"><span style="background: var(--bg-page)"></span><p>Background<br />#F3EAD9</p></article>
+      </div>
+    </section>
+
+    <section class="surface-card ds-section">
+      <h2 class="type-headline-small">Typography</h2>
+      <p class="type-display-large">Display Large / Fredoka</p>
+      <p class="type-display-medium">Display Medium / Fredoka</p>
+      <p class="type-headline-small">Headline Small / Fredoka</p>
+      <p class="type-body-large">Body Large / Nunito</p>
+      <p class="type-body-medium">Body Medium / Nunito</p>
+      <p class="type-label-large">Label Large / Nunito</p>
+    </section>
+
+    <section class="surface-card ds-section">
+      <h2 class="type-headline-small">Components</h2>
+      <div class="ds-row">
+        <button class="btn btn-primary" type="button">Primary Button</button>
+        <input class="ds-input" type="email" placeholder="Email input" />
+      </div>
+    </section>
+  </main>
+</BaseLayout>
