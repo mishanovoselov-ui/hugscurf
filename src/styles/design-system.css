@@ -1,0 +1,217 @@
+:root {
+  /* Brand palette (based on provided reference) */
+  --color-coral-500: #da6d63;
+  --color-coral-600: #c85c53;
+  --color-sun-500: #f2b73f;
+  --color-sun-600: #dfa531;
+  --color-sky-500: #5cc6d5;
+  --color-ocean-600: #3698a8;
+  --color-plum-500: #9f6ac5;
+  --color-cream-100: #f3ead9;
+  --color-paper-100: #fffaf1;
+  --color-ink-900: #222222;
+  --color-ink-700: #5b4a44;
+  --color-line-300: #dbc8b5;
+
+  /* Semantic tokens */
+  --bg-page: var(--color-cream-100);
+  --bg-surface: rgba(255, 250, 241, 0.84);
+  --bg-surface-strong: rgba(255, 250, 241, 0.94);
+  --text-primary: var(--color-ink-900);
+  --text-secondary: var(--color-ink-700);
+  --text-inverse: #fff;
+  --border-default: var(--color-line-300);
+  --accent-primary: var(--color-coral-500);
+  --accent-primary-hover: var(--color-coral-600);
+  --accent-secondary: var(--color-sky-500);
+
+  /* Typography */
+  --font-body: "Nunito", "Segoe UI", sans-serif;
+  --font-display: "Fredoka", "Nunito", "Segoe UI", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  /* Material-like type scale */
+  --type-display-large-size: 57px;
+  --type-display-large-line: 64px;
+  --type-display-large-track: -0.25px;
+  --type-display-medium-size: 45px;
+  --type-display-medium-line: 52px;
+  --type-display-medium-track: 0px;
+  --type-display-small-size: 36px;
+  --type-display-small-line: 44px;
+  --type-display-small-track: 0px;
+  --type-headline-large-size: 32px;
+  --type-headline-large-line: 40px;
+  --type-headline-medium-size: 28px;
+  --type-headline-medium-line: 36px;
+  --type-headline-small-size: 24px;
+  --type-headline-small-line: 32px;
+  --type-title-large-size: 22px;
+  --type-title-large-line: 28px;
+  --type-title-medium-size: 16px;
+  --type-title-medium-line: 24px;
+  --type-title-medium-track: 0.15px;
+  --type-title-small-size: 14px;
+  --type-title-small-line: 20px;
+  --type-title-small-track: 0.1px;
+  --type-body-large-size: 16px;
+  --type-body-large-line: 24px;
+  --type-body-large-track: 0.5px;
+  --type-body-medium-size: 14px;
+  --type-body-medium-line: 20px;
+  --type-body-medium-track: 0.25px;
+  --type-body-small-size: 12px;
+  --type-body-small-line: 16px;
+  --type-body-small-track: 0.4px;
+  --type-label-large-size: 14px;
+  --type-label-large-line: 20px;
+  --type-label-large-track: 0.1px;
+  --type-label-medium-size: 12px;
+  --type-label-medium-line: 16px;
+  --type-label-medium-track: 0.5px;
+  --type-label-small-size: 11px;
+  --type-label-small-line: 16px;
+  --type-label-small-track: 0.5px;
+
+  /* Radius */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 8px 24px rgba(45, 33, 29, 0.1);
+  --shadow-md: 0 16px 40px rgba(45, 33, 29, 0.15);
+
+  /* Spacing */
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  font-size: var(--type-body-large-size);
+  line-height: var(--type-body-large-line);
+  letter-spacing: var(--type-body-large-track);
+  background:
+    radial-gradient(circle at 14% 12%, color-mix(in srgb, var(--color-sun-500) 88%, transparent) 0%, transparent 22%),
+    radial-gradient(circle at 85% 14%, color-mix(in srgb, var(--color-coral-500) 84%, transparent) 0%, transparent 25%),
+    radial-gradient(circle at 12% 78%, color-mix(in srgb, var(--color-sky-500) 78%, transparent) 0%, transparent 24%),
+    radial-gradient(circle at 84% 82%, color-mix(in srgb, var(--color-plum-500) 72%, transparent) 0%, transparent 24%),
+    var(--bg-page);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(920px, 92vw);
+  margin: 0 auto;
+}
+
+.btn {
+  border: 0;
+  border-radius: var(--radius-pill);
+  padding: 0.84rem 1.22rem;
+  font-size: var(--type-label-large-size);
+  line-height: var(--type-label-large-line);
+  letter-spacing: var(--type-label-large-track);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: transform 120ms ease, background-color 120ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  color: var(--text-inverse);
+  background: var(--accent-primary);
+}
+
+.btn-primary:hover {
+  background: var(--accent-primary-hover);
+}
+
+.surface-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(3px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Utility type classes for Figma parity */
+.type-display-large {
+  font-family: var(--font-display);
+  font-size: var(--type-display-large-size);
+  line-height: var(--type-display-large-line);
+  letter-spacing: var(--type-display-large-track);
+  font-weight: var(--font-weight-regular);
+}
+
+.type-display-medium {
+  font-family: var(--font-display);
+  font-size: var(--type-display-medium-size);
+  line-height: var(--type-display-medium-line);
+  letter-spacing: var(--type-display-medium-track);
+  font-weight: var(--font-weight-regular);
+}
+
+.type-headline-small {
+  font-family: var(--font-display);
+  font-size: var(--type-headline-small-size);
+  line-height: var(--type-headline-small-line);
+  font-weight: var(--font-weight-regular);
+}
+
+.type-body-large {
+  font-family: var(--font-body);
+  font-size: var(--type-body-large-size);
+  line-height: var(--type-body-large-line);
+  letter-spacing: var(--type-body-large-track);
+  font-weight: var(--font-weight-regular);
+}
+
+.type-body-medium {
+  font-family: var(--font-body);
+  font-size: var(--type-body-medium-size);
+  line-height: var(--type-body-medium-line);
+  letter-spacing: var(--type-body-medium-track);
+  font-weight: var(--font-weight-regular);
+}
+
+.type-label-large {
+  font-family: var(--font-body);
+  font-size: var(--type-label-large-size);
+  line-height: var(--type-label-large-line);
+  letter-spacing: var(--type-label-large-track);
+  font-weight: var(--font-weight-medium);
+}

@@ -1,37 +1,4 @@
-:root {
-  --bg: #0b1220;
-  --bg-soft: #121c2f;
-  --surface: #0f1728;
-  --text: #f3f4f6;
-  --muted: #b6c1d1;
-  --line: #243248;
-  --brand: #f97316;
-  --brand-dark: #ea580c;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: "Avenir Next", "Segoe UI", sans-serif;
-  color: var(--text);
-  background:
-    radial-gradient(circle at 15% 0%, #1e293b 0%, rgba(30, 41, 59, 0) 34%),
-    radial-gradient(circle at 100% 100%, #1f2937 0%, rgba(31, 41, 55, 0) 30%),
-    var(--bg);
-  min-height: 100vh;
-}
-
-a {
-  color: #dbeafe;
-}
-
-.container {
-  width: min(920px, 92vw);
-  margin: 0 auto;
-}
+@import "./design-system.css";
 
 .splash {
   min-height: 100vh;
@@ -42,44 +9,42 @@ a {
 
 .splash-wrap {
   text-align: center;
-}
-
-.eyebrow {
-  margin: 0;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: #fdba74;
-  font-weight: 700;
+  padding: clamp(1rem, 3vw, 2rem);
 }
 
 .brand-lockup {
   width: min(760px, 90vw);
   height: auto;
   display: block;
-  margin: 0 auto 0.4rem;
+  margin: 0 auto 0.5rem;
 }
 
 h1 {
-  margin: 0.7rem 0 0;
-  font-size: clamp(2rem, 7vw, 4rem);
-  line-height: 1.05;
+  margin: 0.2rem 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, var(--type-display-medium-size));
+  line-height: clamp(2.4rem, 6.8vw, var(--type-display-medium-line));
+  letter-spacing: var(--type-display-medium-track);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
 }
 
 .lead {
-  margin: 1rem auto 0;
+  margin: 0.85rem auto 0;
   max-width: 640px;
-  color: var(--muted);
-  font-size: 1.05rem;
+  color: var(--text-secondary);
+  font-size: var(--type-body-large-size);
+  line-height: var(--type-body-large-line);
+  letter-spacing: var(--type-body-large-track);
 }
 
 .video-shell {
   margin: 1.4rem auto 0;
-  border: 1px solid var(--line);
-  border-radius: 18px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  background: var(--surface);
-  box-shadow: 0 14px 45px rgba(3, 7, 18, 0.45);
+  background: var(--bg-surface-strong);
+  box-shadow: var(--shadow-md);
 }
 
 .hero-video {
@@ -90,55 +55,43 @@ h1 {
 }
 
 .lead-form {
-  margin: 1.3rem auto 0;
+  margin: 1.25rem auto 0;
   display: flex;
-  gap: 0.7rem;
+  gap: var(--space-3);
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .lead-form input {
   width: min(360px, 92vw);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--bg-soft);
-  color: var(--text);
-  padding: 0.78rem 1rem;
-  font-size: 1rem;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-pill);
+  background: var(--color-paper-100);
+  color: var(--text-primary);
+  padding: 0.8rem 1rem;
+  font-size: var(--type-body-large-size);
+  line-height: var(--type-body-large-line);
+  letter-spacing: var(--type-body-large-track);
+  outline: none;
 }
 
-.btn {
-  border: 0;
-  border-radius: 999px;
-  padding: 0.8rem 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.btn-primary {
-  color: #fff;
-  background: var(--brand);
-}
-
-.btn-primary:hover {
-  background: var(--brand-dark);
+.lead-form input:focus {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-secondary) 26%, transparent);
 }
 
 .meta {
   margin-top: 0.95rem;
-  color: var(--muted);
-  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-size: var(--type-body-medium-size);
+  line-height: var(--type-body-medium-line);
+  letter-spacing: var(--type-body-medium-track);
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+.meta a {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
 }
 
 @media (max-width: 760px) {
