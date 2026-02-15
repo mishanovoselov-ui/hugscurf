@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout
+  title="HugScarf - Coming Soon"
+  description="HugScarf is launching soon. Join the waitlist for early access and partner updates."
+>
+  <main class="splash">
+    <section class="container splash-wrap">
+      <p class="eyebrow">HugScarf</p>
+      <h1>Coming Soon</h1>
+      <p class="lead">
+        Transformable comfort for flights, power naps, and daily travel.
+        Join the waitlist for first access.
+      </p>
+
+      <div class="video-shell">
+        <video class="hero-video" autoplay muted loop playsinline controls poster="/favicon.svg">
+          <source src="/hs-1.mp4" type="video/mp4" />
+          <source src="/hs-2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <form
+        class="lead-form"
+        action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID"
+        method="POST"
+      >
+        <label for="email" class="sr-only">Email</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required />
+        <button class="btn btn-primary" type="submit">Join Waitlist</button>
+      </form>
+
+      <p class="meta">For partnerships: <a href="mailto:hello@hugscarf.co">hello@hugscarf.co</a></p>
+    </section>
+  </main>
+</BaseLayout>
