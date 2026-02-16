@@ -1,15 +1,20 @@
 @import "./design-system.css";
 
+:root {
+  --header-height: 96px;
+}
+
 .splash {
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
   background: #fff;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .top-header {
-  height: 96px;
+  height: var(--header-height);
   background: #fff;
   display: flex;
   align-items: center;
@@ -26,8 +31,9 @@
 
 .video-shell {
   width: 100%;
-  flex: 1;
-  min-height: 0;
+  flex: none;
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
   background: #fff;
   overflow: hidden;
   box-sizing: border-box;
@@ -41,12 +47,4 @@
   object-fit: cover;
   object-position: center;
   background: #fff;
-}
-
-@media (max-width: 768px) {
-  .video-shell {
-    flex: none;
-    height: calc(100svh - 96px);
-    height: calc(100dvh - 96px);
-  }
 }
