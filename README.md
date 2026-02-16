@@ -29,6 +29,24 @@ Output: `dist/`
 - Build command: `npm run build`
 - Build output directory: `dist`
 - Framework preset: `Astro`
+- One-command deploy:
+
+```bash
+CLOUDFLARE_API_TOKEN=your_token CF_PAGES_PROJECT=your_project npm run deploy
+```
+
+Or pass project name as an argument:
+
+```bash
+CLOUDFLARE_API_TOKEN=your_token npm run deploy -- your_project
+```
+
+If you prefer interactive auth in local terminal:
+
+```bash
+npx wrangler login
+CF_PAGES_PROJECT=your_project npm run deploy
+```
 
 ## 5) Quick customization
 
